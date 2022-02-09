@@ -1,25 +1,49 @@
-import logo from './logo.svg';
-import './App.css';
+import './style/style.css'
+import Header from './components/Header'
+import Footer from './components/Footer'
+import About from './components/About'
+import Info from './components/Info'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import React, { Component } from 'react'
+
+export default class App extends Component {
+  state = {
+    about: [],
+  }
+
+  addAbout = (state) => {
+    const aboutMe = {
+      name: state.name,
+      dateOfBirth: state.dateOfBirth,
+      nationality: state.nationality,
+      location: state.location,
+      gender: state.gender,
+      contact: state.contact,
+    }
+    this.setState({
+      about: [...this.state.about, aboutMe],
+    })
+  }
+
+  render() {
+    return (
+      <div>
+        <Header />
+        <div className="container">
+          <About addAbout={this.addAbout} />
+          <Info about={this.state.about} />
+        </div>
+        <Footer />
+      </div>
+    )
+  }
 }
 
-export default App;
+/*
+
+education {from-to, name, location, description, title}
+work experience {from-to, name, description, location}
+language skills {name of language, A1-C1 picker}
+other skills input
+
+*/
