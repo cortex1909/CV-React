@@ -40,3 +40,38 @@ footer {
     line-height: 35px;
   }
 }
+
+// inputBox
+.inputBox {
+  border: 1px dotted #2e416f;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+  margin-bottom: 10px;
+  h2 {
+    color: #fff;
+    text-shadow: #2e416fa8 2px 2px 2px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0px 0px 5px 40px;
+    font-size: 1.4rem;
+  }
+}
+
+// LEFT PAGE SIDE
+.LeftSide {
+  width: 50%;
+  padding: 20px;
+}
+
+// RIGHT PAGE SIDE
+.RightSide {
+  position: fixed;
+  top: 155px;
+  left: 60%;
+  width: 500px;
+  height: 700px;
+  border-top: 1px solid #2e416f;
+  border-left: 1px solid #2e416f;
+  box-shadow: #2e416fa8 2.95px 2.95px 3px;
+}
