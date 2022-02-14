@@ -224,6 +224,7 @@ html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   scroll-behavior: smooth;
+  font-size: 1.1rem;
 }
 
 body {
@@ -298,10 +299,31 @@ footer .text {
   top: 155px;
   left: 60%;
   width: 500px;
-  height: 700px;
   border-top: 1px solid #2e416f;
   border-left: 1px solid #2e416f;
   -webkit-box-shadow: #2e416fa8 2.95px 2.95px 3px;
           box-shadow: #2e416fa8 2.95px 2.95px 3px;
+}
+
+.RightSide .outputBox {
+  margin: 10px 10px;
+}
+
+.RightSide .outputBox h2 {
+  color: #2e416f;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  font-size: 1.2rem;
+  letter-spacing: 3px;
+}
+
+.RightSide .outputBox p.output {
+  margin: 10px 10px;
+  color: #e4e4e4;
+}
+
+.RightSide .outputBox p.output strong {
+  color: #2e416f;
 }
 /*# sourceMappingURL=style.css.map */

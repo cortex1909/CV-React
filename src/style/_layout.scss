@@ -1,6 +1,7 @@
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
+  font-size: 1.1rem;
 }
 
 body {
@@ -70,8 +71,25 @@ footer {
   top: 155px;
   left: 60%;
   width: 500px;
-  height: 700px;
   border-top: 1px solid #2e416f;
   border-left: 1px solid #2e416f;
   box-shadow: #2e416fa8 2.95px 2.95px 3px;
+  .outputBox {
+    margin: 10px 10px;
+    h2 {
+      color: #2e416f;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+      font-size: 1.2rem;
+      letter-spacing: 3px;
+    }
+    p.output {
+      margin: 10px 10px;
+      color: #e4e4e4;
+      strong {
+        color: #2e416f;
+      }
+    }
+  }
 }
