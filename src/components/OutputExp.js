@@ -4,16 +4,16 @@ const OutputExp = ({ state }) => {
   return (
     <>
       <p className="output">
-        <strong>Job Name:</strong> {state.jobName}
+        <strong>Job Name:</strong> {state['experience'].jobName}
       </p>
       <p className="output">
-        <strong>Year of beginning:</strong> {state.startYear}
+        <strong>Year of beginning:</strong> {state['experience'].startYear}
       </p>
       <p className="output">
-        <strong>Year of ending:</strong> {state.endYear}
+        <strong>Year of ending:</strong> {state['experience'].endYear}
       </p>
       <p className="output">
-        <strong>Location:</strong> {state.location}
+        <strong>Location:</strong> {state['experience'].location}
       </p>
     </>
   )

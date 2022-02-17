@@ -1,45 +1,62 @@
+import { render } from '@testing-library/react'
+import React, { Component } from 'react'
 import OutputAbout from '../components/OutputAbout'
 import OutputEducation from '../components/OutputEducation'
 import OutputExp from '../components/OutputExp'
 import OutputOther from '../components/OutputOther'
 
-const RightSide = ({ state }) => {
+class RightSide extends Component {
+  render() {
+    const { state } = this.props
+
+    return (
+      <div className="RightSide">
+        <div className="outputBox">
+          <h2>About Me</h2>
+          <OutputAbout key={state['about'].id} state={state} />
+        </div>
+        <div className="outputBox">
+          <h2>Education</h2>
+          <OutputEducation key={state['education'].id} state={state} />
+        </div>
+        <div className="outputBox">
+          <h2>Experience</h2>
+          <OutputExp key={state['experience'].id} state={state} />
+        </div>
+        <div className="outputBox">
+          <h2>Other Informations</h2>
+          <OutputOther key={state['other'].id} state={state} />
+        </div>
+      </div>
+    )
+  }
+}
+
+export default RightSide
+
+/*
+
+const RightSide = ({ state, componentRef }) => {
   return (
     <div className="RightSide">
       <div className="outputBox">
         <h2>About Me</h2>
-        {state.map(
-          (about) =>
-            about.id === 'about' && <OutputAbout key={about.id} state={about} />
-        )}
+        <OutputAbout key={state['about'].id} state={state} />
       </div>
       <div className="outputBox">
         <h2>Education</h2>
-        {state.map(
-          (education) =>
-            education.id === 'education' && (
-              <OutputEducation key={education.id} state={education} />
-            )
-        )}
+        <OutputEducation key={state['education'].id} state={state} />
       </div>
       <div className="outputBox">
         <h2>Experience</h2>
-        {state.map(
-          (experience) =>
-            experience.id === 'experience' && (
-              <OutputExp key={experience.id} state={experience} />
-            )
-        )}
+        <OutputExp key={state['experience'].id} state={state} />
       </div>
       <div className="outputBox">
         <h2>Other Informations</h2>
-        {state.map(
-          (other) =>
-            other.id === 'other' && <OutputOther key={other.id} state={other} />
-        )}
+        <OutputOther key={state['other'].id} state={state} />
       </div>
     </div>
   )
 }
 
-export default RightSide
+*/

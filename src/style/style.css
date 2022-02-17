@@ -203,12 +203,7 @@ table {
 }
 
 .btn {
-  position: relative;
-  width: 200px;
-  margin-top: 10px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  width: 100%;
   height: 50px;
   cursor: pointer;
   -o-border-image: linear-gradient(45deg, turquoise, greenyellow) 1;
@@ -218,6 +213,11 @@ table {
   font-size: 1.1rem;
   text-transform: uppercase;
   border-radius: 0 10px 0 10px;
+}
+
+.btn:hover {
+  -o-border-image: linear-gradient(225deg, turquoise, greenyellow) 1;
+     border-image: linear-gradient(225deg, turquoise, greenyellow) 1;
 }
 
 html {

@@ -1,6 +1,4 @@
-import Input from './Input'
-
-const OtherBox = () => {
+const OtherBox = ({ state, onChange }) => {
   return (
     <div className="inputBox">
       <h2>Other</h2>
@@ -8,15 +6,16 @@ const OtherBox = () => {
         <div className="form__group field">
           <textarea
             placeholder="Enter other relevant info..."
-            name="textarea"
+            name="text"
             className="form__field"
             rows="10"
+            value={state['other'].text}
+            onChange={(e) => onChange(e)}
           />
           <label htmlFor="textarea" className="form__label">
             Enter other relevant info...
           </label>
         </div>
-        <input type="submit" value="Save Box" className="btn save" />
       </form>
     </div>
   )

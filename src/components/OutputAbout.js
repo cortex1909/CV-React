@@ -2,10 +2,10 @@ const OutputAbout = ({ state }) => {
   return (
     <>
       <p className="output">
-        {state.firstName} {state.lastName}
+        {state['about'].firstName} {state['about'].lastName}
       </p>
-      <p className="output">{state.email}</p>
-      <p className="output">{state.location}</p>
+      <p className="output">{state['about'].email}</p>
+      <p className="output">{state['about'].location}</p>
     </>
   )
 }
