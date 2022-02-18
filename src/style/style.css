@@ -213,6 +213,7 @@ table {
   font-size: 1.1rem;
   text-transform: uppercase;
   border-radius: 0 10px 0 10px;
+  margin: 5px 0;
 }
 
 .btn:hover {
@@ -325,5 +326,46 @@ footer .text {
 
 .RightSide .outputBox p.output strong {
   color: #2e416f;
+}
+
+.PrintPage {
+  display: none;
+  font-size: 24px;
+  margin: 5mm 5mm;
+}
+
+.PrintPage h1 {
+  color: #2e416f;
+  font-weight: bold;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.PrintPage .outputBox {
+  margin: 10px 10px;
+}
+
+.PrintPage .outputBox h2 {
+  color: #2e416f;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  font-size: 1.2rem;
+  letter-spacing: 3px;
+}
+
+.PrintPage .outputBox p.output {
+  margin: 10px 10px;
+  color: #e4e4e4;
+}
+
+.PrintPage .outputBox p.output strong {
+  color: #2e416f;
+}
+
+@media print {
+  .PrintPage {
+    display: block;
+  }
 }
 /*# sourceMappingURL=style.css.map */

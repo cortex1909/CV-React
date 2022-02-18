@@ -5,12 +5,15 @@ import OutputEducation from '../components/OutputEducation'
 import OutputExp from '../components/OutputExp'
 import OutputOther from '../components/OutputOther'
 
-class RightSide extends Component {
+class PrintPage extends Component {
   render() {
     const { state } = this.props
 
     return (
-      <div className="RightSide">
+      <div className="PrintPage">
+        <h1>
+          {state['about'].firstName} {state['about'].lastName} CV
+        </h1>
         <div className="outputBox">
           <h2>About Me</h2>
           <OutputAbout key={state['about'].id} state={state} />
@@ -32,4 +35,4 @@ class RightSide extends Component {
   }
 }
 
-export default RightSide
+export default PrintPage

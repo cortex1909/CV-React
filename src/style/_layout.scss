@@ -93,3 +93,40 @@ footer {
     }
   }
 }
+
+// PRINT PAGE
+.PrintPage {
+  display: none;
+  font-size: 24px;
+  margin: 5mm 5mm;
+  h1 {
+    color: #2e416f;
+    font-weight: bold;
+    font-size: 1.4rem;
+    text-align: center;
+  }
+  .outputBox {
+    margin: 10px 10px;
+    h2 {
+      color: #2e416f;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+      font-size: 1.2rem;
+      letter-spacing: 3px;
+    }
+    p.output {
+      margin: 10px 10px;
+      color: #e4e4e4;
+      strong {
+        color: #2e416f;
+      }
+    }
+  }
+}
+
+@media print {
+  .PrintPage {
+    display: block;
+  }
+}

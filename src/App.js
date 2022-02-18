@@ -6,6 +6,7 @@ import LeftSide from './Pages/LeftSide'
 import RightSide from './Pages/RightSide'
 import emptyCV from './components/emptyCV'
 import { useReactToPrint } from 'react-to-print'
+import PrintPage from './Pages/PrintPage'
 
 const App = () => {
   const appName = 'Create my CV'
@@ -103,7 +104,8 @@ const App = () => {
           deleteCV={deleteCV}
           printCV={printCV}
         />
-        <RightSide state={state} ref={componentRef} />
+        <RightSide state={state} />
+        <PrintPage state={state} ref={componentRef} />
       </div>
       <Footer />
     </>
@@ -111,44 +113,3 @@ const App = () => {
 }
 
 export default App
-
-/*
-
-education {from-to, name, location, description, title}
-work experience {from-to, name, description, location}
-language skills {name of language, A1-C1 picker}
-other skills input
-
-*/
-
-/*
-
-  const [state, setState] = useState([
-    {
-      id: 'about',
-      firstName: 'Hrvoje',
-      lastName: 'Đaković',
-      email: '',
-      location: 'Hrvatska',
-    },
-    {
-      id: 'education',
-      schoolName: 'Virovitica College',
-      startYear: '10/2018',
-      endYear: '9/2021',
-      location: 'Virovitica, Hrvatska',
-    },
-    {
-      id: 'experience',
-      jobName: 'Frontend Web Developer',
-      startYear: '9/2017',
-      endYear: '10/2021',
-      location: 'Nova Gradiška, Hrvatska',
-    },
-    {
-      id: 'other',
-      text: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo, illum. Corrupti in aperiam cumque omnis praesentium minus hic recusandae nihil.',
-    },
-  ])
-
-*/
